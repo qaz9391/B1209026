@@ -1,0 +1,328 @@
+<html>
+    <head>
+        <title>AV TIME</title>
+        <meta charset="utf-8">
+        <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+        <script>
+            $(window).load(function() {
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    rtl: true
+                });
+            });
+        </script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                color: gray;
+                text-align: center;
+            }
+            body {
+                background-color: #ffffff; 
+                color: #666666;
+                font-family: Arial, sans-serif;
+            }
+            h1, h2, h3 {
+                color: #364E6E; 
+            }
+            a {
+                color: #0396FF; 
+                text-decoration: none;
+            }
+            a:hover {
+                color: #0288D1;
+            }
+            .button {
+                background-color: #0396FF;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+            }
+            .button:hover {
+                background-color: #0288D1; 
+            }
+            /* Top bar */
+            .top {
+                background-color: white;
+                border-bottom: 1px solid #ddd;
+            }
+            .top .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 20px;
+            }
+            .top .logo {
+                font-size: 30px;
+                font-weight: bold;
+            }
+            .top .logo img {
+                width: 80px;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+            .top .top-nav a {
+                margin-left: 15px;
+                color: #333;
+                text-decoration: none;
+                font-size: 18px;
+                transition: color 0.3s;
+            }
+            .top .top-nav a:hover {
+                color: #007BFF;
+            }
+            /* Navigation bar */
+            .nav {
+                background-color: #333;
+                color: white;
+                padding: 10px 0;
+            }
+            .nav ul {
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                margin: 0;
+            }
+            .nav li {
+                margin: 0 15px;
+            }
+            .nav li a {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+                transition: background-color 0.3s;
+                padding: 8px 12px;
+            }
+            .nav li a:hover {
+                background-color: #575757;
+                border-radius: 5px;
+            }
+            /* Dropdown menu */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #333;
+                min-width: 160px;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            li.dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .dropdown-content a {
+                color: white;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            .dropdown-content a:hover {
+                background-color: #575757;
+            }
+            /* Slider */
+            .slider {
+                background-color: black;
+                margin-bottom: 20px;
+            }
+            /* Banner */
+            .banner {
+                background-image: linear-gradient(to bottom, #1a1a1a, #333333);
+                color: rgb(221, 221, 221);
+                padding: 40px 20px;
+                text-align: center;
+            }
+            .banner h1 {
+                margin-bottom: 20px;
+                color : rgba(255, 255, 255, 0.512);
+                font-weight: bold;
+                letter-spacing: 1px;
+                text-shadow: 1px 1px 4px rgba(35, 26, 26, 0.8);
+            }
+            /* Faculty section */
+            .faculty {
+                background-color: white;
+                padding: 40px 20px;
+                text-align: center;
+            }
+            .faculty h2 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+            .faculty .container {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+            .faculty .teacher {
+                text-decoration: none;
+                margin: 10px;
+            }
+            .faculty .teacher img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                margin-bottom: 10px;
+                border: 3px solid #ddd; 
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .faculty .teacher h3 {
+                background-color: rgba(39,40,34,0.5);
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+                
+            }
+            /* Contact section */
+            .contact {
+                background-color: #f9f9f9;
+                padding: 40px 20px;
+            }
+            .contact h2 {
+                font-size: 28px;
+                margin-bottom: 20px;
+                color: #364E6E;
+            }
+            .contact .infos {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            .contact .infos .left {
+                text-align: left;
+                max-width: 300px;
+            }
+            .contact .infos .left b {
+                font-size: 18px;
+                line-height: 1.8;
+            }
+            .contact .infos .left span {
+                color: #666;
+                padding-left: 10px;
+                display: block;
+            }
+            .contact .infos .right p {
+                margin-bottom: 10px;
+                font-size: 16px;
+                color: #555;
+            }
+            .contact .infos .right a {
+                display: inline-block;
+                margin: 5px;
+                transition: transform 0.2s;
+            }
+            .contact .infos .right a:hover {
+                transform: scale(1.1);
+            }
+            .contact .infos .right iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+                border-radius: 5px;
+            }
+            .contact a img {
+                width: 50px; 
+                height: 50px; 
+                margin: 0 10px;
+            }
+
+            /* Footer */
+            footer {
+                background-color: #333333;
+                color: #ffffff; 
+                text-align: center;
+                padding: 20px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top">
+            <div class="container">
+                <div class="logo">
+                    <img src="https://github.com/user-attachments/assets/9a41318d-beff-4358-a5a2-9270520e89fa" alt="Logo">
+                    AV TIME
+                </div>
+                <div class="top-nav">
+                    <a href="#">找女優</a>
+                    <a href="#">帳號登入</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav">   
+            <ul>
+                <li><a href="#home">女優影片一覽</a></li>
+                <li><a href="#introduction">近期熱播</a></li>
+                <li class="dropdown">
+                    <a href="#faculty">熱門的女優推薦</a>
+                    <div class="dropdown-content">
+                        <a href="#faculty">石川澪</a>
+                        <a href="#faculty">河北彩花</a>
+                        <a href="#faculty">白石桃</a>
+                        <a href="#faculty">明里紬</a>
+                    </div>                       
+                </li>
+     
+            </ul>
+        </div>
+        <div class="slider">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li><img src="https://cdn-origin.cool-style.com.tw/cool/2023/05/s1-cover.jpg" alt="Slide 1"></li>
+                    <li><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_9UDXBm53uFacJanIN5w95pTZwTfnMvGKpv5wFB8ePWr9nveVzltoOW-M36G_BgbZMk_g82RHnhnllg7OcdDDe4k56BT8eXHF5hbwlApYuWo80K0Ftn67VjDetV1Dt9Mrm5-3C2k5oY1sQfj0yLdVEfhhruMuSxt2puioaSdKFs-mvpjA5kiZCXo1MA/s2908/Screenshot%202023-01-25%20at%2013.54.00.png" alt="Slide 2"></li>
+                </ul>
+            </div>
+        </div>
+      
+        <div class="faculty" id="faculty">
+            <h2>熱門女優</h2>
+            <div class="container">
+                <a class="teacher" href="#">
+                    <img src="https://today-obs.line-scdn.net/0hTU5hXOtyC3oIERvcw2R0LTBHBws7dxFzKnIWTngYU0xyPUkvZH9YGSkWBlZ1cx5_KCRET34YB0shI0ouNQ/w644" alt="石川澪">
+                    <h3>石川澪</h3>
+                </a>
+                <a class="teacher" href="#">
+                    <img src="https://media.nownews.com/nn_media/thumbnail/2024/07/1721378344090-5483fe455b7f4d03b130daf2008e0f5f-800x1000.webp?unShow=false&waterMark=false" alt="河北彩花">
+                    <h3>河北彩花</h3>
+                </a>
+                <a class="teacher" href="#">
+                    <img src="https://www.haoyun5.net/d/file/2024/10/11/pzthoiuy2ys.jpg" alt="白石桃">
+                    <h3>白石桃</h3>
+                </a>        
+                <a class="teacher" href="#">
+                    <img src="https://s.yimg.com/ny/api/res/1.2/cTxsZIhXEwg6zRtX78x5Mg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTk2MA--/https://media.zenfs.com/ko/setn.com.tw/49740f0f54e1719ca7022d1653c544b4" alt="明里紬">
+                    <h3>明里紬</h3>
+                </a>        
+            </div>
+        </div>
+        <div class="contact" id="about">
+            <h1>歡迎贊助廠商</h1>
+            <div class="infos">
+                <div class="left">
+                    <b>av time</b>
+                </div>
+                <div class="right">
+                    <p>追蹤社群平台：</p>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="https://github.com/Wariguana/html/raw/main/D2.jpg" alt="Instagram">
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="https://github.com/Wariguana/html/raw/main/D3.jpg" alt="Facebook">
+                    </a>
+                    <a href="https://line.me" target="_blank">
+                        <img src="https://github.com/Wariguana/html/raw/main/D1.jpg" alt="LINE">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            &copy; 2024 AV TIME AV TIME.
+        </div>
+    </body>
+</html>
